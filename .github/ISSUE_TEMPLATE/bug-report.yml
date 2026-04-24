@@ -1,0 +1,54 @@
+name: Bug Report
+description: Report a broken link, incorrect code, or site issue.
+title: "[Bug] Brief description"
+labels: ["bug"]
+assignees: [akashtalole]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Affected Page or Mission
+      description: Which page or mission has the bug?
+      placeholder: "RECRUIT-03: Your First AI Application"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should happen?
+      placeholder: "The code example should run without errors..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happens?
+      placeholder: "Running the code gives a ModuleNotFoundError..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue?
+      placeholder: |
+        1. Go to RECRUIT-03
+        2. Copy the code in Step 4
+        3. Run it in a Python environment
+        4. See error
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python version, browser, etc.
+      placeholder: "macOS 14, Python 3.11, Chrome 123"
+    validations:
+      required: false

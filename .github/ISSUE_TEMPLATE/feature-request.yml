@@ -1,0 +1,60 @@
+name: Mission or Feature Request
+description: Suggest a new mission, topic, or platform feature.
+title: "[Request] Brief description"
+labels: ["enhancement"]
+assignees: [akashtalole]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Request Type
+      options:
+        - "New Mission"
+        - "Mission Enhancement"
+        - "New Track"
+        - "Platform Feature"
+        - "Other"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: track
+    attributes:
+      label: Suggested Track
+      description: Which track should this mission/feature belong to?
+      options:
+        - "Recruit (•)"
+        - "Operative (••)"
+        - "Commander (•••)"
+        - "Special Ops"
+        - "Cowork Collective"
+        - "Not applicable"
+    validations:
+      required: false
+
+  - type: input
+    id: topic
+    attributes:
+      label: Topic or Title
+      description: What should the mission/feature be about?
+      placeholder: "OPERATIVE-06: Fine-tuning AI Models"
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use Case
+      description: Why is this mission or feature needed? What problem does it solve?
+      placeholder: "Fine-tuning is increasingly important for production AI, but there's no beginner-friendly walkthrough..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: Helpful Resources
+      description: Any links, papers, or tools that could help build this mission?
+      placeholder: "https://docs.anthropic.com/..."
+    validations:
+      required: false
