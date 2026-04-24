@@ -1,0 +1,120 @@
+theme: jekyll-theme-chirpy
+
+title: AI-Workshop
+tagline: Learn AI by Doing — Mission-Based AI Education
+description: >-
+  A hands-on AI workshop platform with progressive missions from Recruit to Commander level.
+  Master AI development through structured, real-world challenges.
+
+url: "https://akashtalole.github.io"
+baseurl: "/AI-Workshop"
+
+lang: en
+timezone: Asia/Kolkata
+
+github:
+  username: akashtalole
+
+social:
+  name: Akash Talole
+  email: ""
+  links:
+    - https://github.com/akashtalole
+
+avatar: /assets/img/avatar.png
+
+toc: true
+
+comments:
+  provider: giscus
+  giscus:
+    repo: akashtalole/AI-Workshop
+    repo_id: ""
+    category: General
+    category_id: ""
+    mapping: pathname
+    strict: 0
+    reactions_enabled: 1
+    emit_metadata: 0
+    input_position: bottom
+    theme: preferred_color_scheme
+    lang: en
+
+analytics:
+  google:
+    id: ""
+  goatcounter:
+    id: ""
+
+paginate: 10
+
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+  - scope:
+      path: assets/js/dist
+    values:
+      swcache: true
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - "*.config.js"
+  - package*.json
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/

@@ -1,0 +1,81 @@
+name: Mission Feedback
+description: Share feedback on a specific mission — help us improve the content.
+title: "[Feedback] MISSION-ID: Brief description"
+labels: ["feedback", "mission-content"]
+assignees: [akashtalole]
+body:
+  - type: dropdown
+    id: track
+    attributes:
+      label: Mission Track
+      description: Which track is this feedback for?
+      options:
+        - "Recruit (•)"
+        - "Operative (••)"
+        - "Commander (•••)"
+        - "Special Ops"
+        - "Cowork Collective"
+    validations:
+      required: true
+
+  - type: input
+    id: mission
+    attributes:
+      label: Mission ID & Title
+      description: e.g., RECRUIT-03 — Your First AI Application
+      placeholder: "RECRUIT-00: Welcome to AI-Workshop"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty Rating
+      description: How did you find the difficulty level?
+      options:
+        - "Too easy — needs more challenge"
+        - "Just right"
+        - "Slightly difficult but manageable"
+        - "Too difficult — needs better scaffolding"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: clarity
+    attributes:
+      label: Clarity Rating
+      description: How clear were the instructions?
+      options:
+        - "Very clear — no confusion"
+        - "Mostly clear — minor ambiguities"
+        - "Somewhat unclear — needed to guess at steps"
+        - "Very unclear — couldn't follow without external help"
+    validations:
+      required: true
+
+  - type: textarea
+    id: helpful
+    attributes:
+      label: What was most helpful?
+      description: Which parts of the mission worked well for you?
+      placeholder: "The step-by-step lab instructions were very clear..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: confusing
+    attributes:
+      label: What was confusing or missing?
+      description: Where did you get stuck or feel lost?
+      placeholder: "I wasn't sure how to set up the API key in step 3..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggestions
+    attributes:
+      label: Suggestions for improvement
+      description: How could this mission be improved?
+      placeholder: "Adding a troubleshooting section would help..."
+    validations:
+      required: false
